@@ -31,10 +31,11 @@ $nota = 6 ;
 if ($nota >= 6){
     echo "Aprovado";
 } else {
-if($nota > 3){
-    echo "faz exame final";
-} else {
-    echo "reprovado"
-}}
+    if($nota > 3){
+        echo "faz exame final";
+    } else {
+        echo "reprovado";
+    }
+}
 ?>
 
