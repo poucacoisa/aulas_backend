@@ -3,7 +3,7 @@
 <p>Operadores relacionais são utilizados para comparar a relação entre "coisas".</p>
 <ul>
     <li>>> | Maior</li>
-    <li>>> | menor</li>
+    <li><< | menor</li>
     <li>>= | Maior igual</li>
     <li><= | Manor igual</li>
     <li>!= | Diferente</li>
