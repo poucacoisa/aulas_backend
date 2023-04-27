@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body><h2>
+    
+    <input type="checkbox"  id="btm1" class="botao">torcer para  o palmeiras<br>
+    <input type="checkbox"  id="btm2" class="botao">ver o paumeiras<br>
+    <input type="checkbox"  id="btm3" class="botao">ser feliz com isso<br>
+    
+    
+    <script>
+        var btn1 = document.getElementById("btm1");
+        var btn2 = document.getElementById("btm2");
+        var btn3 = document.getElementById("btm3");
+
+
+        function process(e) {
+            if(btn1.checked && btn2.checked && btn3.checked ){
+                e.target.checked = false;
+                
+            }                 
+        }
+        
+        btn1.addEventListener("click", process);
+        btn2.addEventListener("click", process);
+        btn3.addEventListener("click", process);
+       
+    </script>
+    
+</h2></body>
+</html>
