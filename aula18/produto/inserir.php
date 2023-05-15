@@ -15,4 +15,4 @@
  $comando->execute();
  }
  //abre o arquivo form.php
- header("location: form.php");
+ header("location: produtos.php");
