@@ -15,4 +15,4 @@ $id = $_GET["id"];
  //header("location: form.php");
 }
  //abre o arquivo form.php
- header("location: usuarios.php");
+ header("location: index.php");
