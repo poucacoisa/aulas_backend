@@ -6,7 +6,7 @@
     <div class="text-end">
         <a href="form.php" class=" btn btn-success">Inserir usuario</a>
     </div>
-    <table class="table">
+    <table class="table" id="myTable">
   <thead>
     <tr>
       <th scope="col">nome</th>
