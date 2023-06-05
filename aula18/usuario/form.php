@@ -1,4 +1,5 @@
 <?php
+ require_once "../controla_sessao/controla.php";
 require_once "consulta_por_id.php"?>
 <?php require_once "../template/cabecalho.php";?>
 <div class ="container">

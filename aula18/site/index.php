@@ -20,7 +20,7 @@ foreach ($produtos as $key => $produto) :
 $categorias[] = $produto["categoria"];
 ?>
         <li class="nav-item">
-          <a class="nav-link" href="#"><?php echo $produto["categoria"];?></a>
+          <a class="nav-link" href="index.php?categoria=<?= $value["categoria"];?>"></a>
         </li>
         <?php 
       endif; endforeach; ?>

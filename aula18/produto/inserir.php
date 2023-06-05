@@ -1,4 +1,5 @@
 <?php
+ require_once "../controla_sessao/controla.php";
  require_once "../conexao.php";
  if(isset($_POST["descricao"])&& isset($_POST["descricao"])&& isset($_POST["preco"])){
 //inclui o arquivo para salva a foto

@@ -1,4 +1,5 @@
 <?php
+ require_once "../controla_sessao/controla.php";
  require_once "../conexao.php";
  //verifica se foi enviada o param pela url
  if(isset($_GET['id'])){

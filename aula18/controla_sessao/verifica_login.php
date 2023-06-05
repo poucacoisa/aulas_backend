@@ -30,13 +30,14 @@ $senha = $_POST['senha'];
     // cria a variavel sessão
     $_SESSION['usuario'] = $usuario;
     //redireciona para produtos
-    header("location: ../produtos/index.php");
+    header("location: ../produto/index.php");
+    die();
         }
 
-        else{ echo "senha invalida";
+        $erro_login  = "senha invalida";
             
 }}else{
-    echo "não existe um usuario com esse login";
+    $erro_login = "não existe um usuario com esse login";
  }
-}
+
 
