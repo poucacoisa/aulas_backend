@@ -1,0 +1,83 @@
+Criar os arquivos necessarios para Inserir, Listar, Atualizar e Apagar, como foi ensinado nas aulas.
+
+Juntamente com o desenvolvimento da atividade,você deve registrar todos os passos que você realizou e explicar os códigos utilizados. 
+Esses registros devem ser compilados em um relatório/tutorial manuscrito.que deve ser entegue juntamente com o código-fonte da atividade 
+desenvolvida.
+Tabela Sorteada: 
+
+Exames
+Atributos:
+
+
+ID (Chave Primária)
+Nome (Texto)
+Tipo (Texto)
+Resultado (Númerico)
+Data (Texto)
+
+Relatório
+Comecei criando uma tabela no workbench
+exportei o banco para o heidsql
+
+fiz a ligação usando como base o arquivo da aula e já preparei um codigo "if" para parar o codigo caso desse errado(aconteceu)
+$host = "127.0.0.1";
+$port = "3306";
+$user = "root";
+$password = "";
+$database = "exames";
+isso são os dados do heid, necessarios para ligar o banco 
+$conexao = new mysqli($host, $user, $password, $database, $port);
+if($conexao -> connect_error){(caso desse erro o comando die iria parar o codigo)
+    echo "Foi encontrado o erro :" . $conexao ->connect_error;
+    die();
+}
+depois comecei pelo cabeçalho e pelo rodapé, simplesmente copiei os codigos q no bruto só servem para ligar o arquivo ao estilo e os sripts usando links
+isso cria uma variavel que eu não sei pra q serve
+copiei o arquivo consulta por id com o nome consulta, pensei em consultinha mas não coloquei
+require_once "../conexao.php";
+ //verifica se foi enviada o param pela url
+ if(isset($_GET['id'])){
+$id = $_GET["id"];
+ //string com o comendo sql para ser executoado no db
+ $sql = "SELECT * FROM  `exame` WHERE  `id`= ?;";
+ // mudei de produto para exame
+ //prepara o slq para ser executado no banco de dados
+ $comando=$conexao->prepare($sql);
+ //adiciona os valores nos parametros
+ $comando->bind_param("i", $id);
+ //executa o sql - comando no banco de dados
+ $comando->execute();
+ //header("location: form.php");
+ //pega o resultado da consulta
+ $resultado = $comando ->get_result();
+ //pegar a primeira linha do resultado
+ $exame = $resultado ->fetch_assoc();
+copiei o consulta todos com o nome consultao , apaguei algumas linhas desnecessarias para o 
+$sql = "SELECT * FROM  exame ";
+//cria um vetor vazio
+$exames =[];
+while($exame = $resultado ->fetch_assoc()){
+//adiciona o produto (linha do resultado no vetor)
+$exames[] = $exame;
+}
+
+copiei o inserir e
+ //verifica se foi enviada o param pela url
+ if(isset($_GET['id'])){$id = $_GET["id"];
+ //string com o comendo sql para ser executado no db
+ $sql = "DELETE FROM `exame` WHERE  `id`= ?;";
+ //abre o arquivo form.php
+ header("location: index.php");
+copiei o Atualizar só mudei uma coisa ou outra, não vou ficar repetindo os codigos já esplicados
+ $id = $_POST["id"];
+ $nome = $_POST["nome"];
+ $descricao = $_POST["descricao"];
+ $preco = $_POST["preco"];
+ $foto = $nome_arquivo;
+usei o arqui consultao que lista todos atráves docodigo 
+while($exame = $resultado ->fetch_assoc()){
+ //adiciona o produto (linha do resultado no vetor)
+ $exames[] = $exame;
+ }
+e depois , com uns erros e muito sofrimento, foi só partir pro abraço
+
